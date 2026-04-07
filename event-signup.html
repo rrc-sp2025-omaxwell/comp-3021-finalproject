@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css" />
+        <title>Event Signup</title>
+    </head>
+    
+    <body id="events">
+        <header>
+            <h1 class="inter-header">PiXELL River Financial</h1>
+        </header>
+        <nav>    
+            <a href="#eventSignup">Event Signup Form</a>
+            <a href="#eventTable">Events Table</a>
+            <a href="#eventSummaryTable">Upcoming Events Summary</a> 
+        </nav>
+        <section id="eventSignup">
+            <h2 class="inter-header">Event Signup Form</h1>
+            <form class="inter-general" id="eventSignupForm">
+                <fieldset>
+                    <div>
+                        <label for="eventName">Enter the Event Name:</label>
+                        <input name="eventName" id="eventName" type="text">
+                        <span class="error" id="eventNameError">* Event Name field must not be blank.</span>
+                    </div>
+                    <div>
+                        <label for="representativeName">Enter the Company Representative's Name:</label>
+                        <input name="representativeName" id="representativeName" type="text">
+                        <span class="error" id="representativeNameError">* Representative Name field must not be blank.</span>
+                    </div>
+                    <div>
+                        <label for="representativeEmail">Enter the Representative's Email:</label>
+                        <input name="representativeEmail" id="representativeEmail" type="text">
+                        <span class="error" id="representativeEmailError">* Please enter a valid email.</span>
+                    </div>
+                    <div>
+                        <label for="roleSelection">Choose the Company's Role for the Event:</label>
+                        <select name="roleSelection" id="roleSelection">
+                            <option value="">(select an option)</option>
+                            <option value="Sponsor">Sponsor</option>
+                            <option value="Participant">Participant</option>
+                            <option value="Organizer">Organizer</option>
+                        </select>
+                        <span class="error" id="roleSelectionError">* Please make a selection.</span>
+                    </div>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+        <section id="eventTableSection">
+            <h2 class="inter-header">Events Signup Table</h1>
+            <table class="inter-general" id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Representative Name</th>
+                        <th>Representative Email</th>
+                        <th>Company Role</th>
+                        <th>Delete?</th>
+                    </tr>
+                </thead>
+                <tbody id="eventItems">
+                    <!-- Events go here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="eventSummarySection">
+            <h2 class="inter-header">Upcoming Events Summary</h1>
+            <table class="inter-general" id="eventSummaryTable">
+                <thead>
+                    <tr>
+                        <th>Sponsor</th>
+                        <th>Organizer</th>
+                        <th>Participant</th>
+                    </tr>
+                </thead>
+                <tbody id="eventSummaryItems">
+                    <!-- Event Summary goes here -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p class="inter-general">All rights and reserved. Divya Divya, Owen Maxwell, Jasmine Sunga</p>
+        </footer>
+
+        
+    </body>
+    <script src="script.js"></script>
+</html>
