@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Donation Tracker</title>
+</head>
+
+<body>
+
+    <header></header>
+    <div id="navbar"></div>
+    <footer></footer>
+
+    <section id="divya-components" class ="section">
+    <div class="section-decoration"></div>
+
+        <h1 class="section-title">Donation Tracker</h1>
+
+        <div class="form-container">
+            <form id="donationForm" class = "donation-form">
+
+            <label for="charityName" class="input-label">Charity Name:</label>
+            <input type="text" id="charityName" class="input-field"/>
+            <p id="charityName_error" class="error-message"></p>
+
+            <label for="donationAmount" class="input-label">Donation Amount ($):</label>
+            <input type="number" id="donationAmount" class="input-field"/>
+            <p id="donationAmount_error" class="error-message"></p>
+
+            <label for="donationDate" class="input-label">Donation Date:</label>
+            <input type="date" id="donationDate" class="input-field"/>
+            <p id="donationDate_error" class="error-message"></p>
+
+            <label for="donorMessage" class="input-label">Donor Message:</label>
+            <input type="text" id="donorMessage" class="input-field"/>
+            <p id="donorMessage_error" class="error-message"></p>
+
+
+            <button type="submit" id="submitDonation" class="submit-button">Submit Donation</button>    
+
+            <div id="formMessage" class="form-message"></div>
+        
+        </form>
+        </div>
+
+        <!--h2 class="section-subtitle">Donation Records</h2>
+        <ul id="donationList" class="donation-list"></ul> -->
+
+        <h2 class="section-subtitle">Donation Table</h2>
+        <table id="donationList" class="donation-list">
+            <thead>
+                <tr>
+                    <th>Charity Name</th>
+                    <th>Donation Amount ($)</th>
+                    <th>Donation Date</th>
+                    <th>Donor Message</th>
+                </tr>
+            </thead> 
+            <tbody
+                id="donationListBody">
+                <!-- Donation records will be inserted here in rows -->
+            </tbody>
+        </table>
+
+        <h3 class="section-subtitle">Total Donations</h3>
+        <p id="totalDonations">Total Donation Amount: $0</p>
+    </section> 
+
+    <script src="script.js" type="module"></script>
+</body>
